@@ -35,5 +35,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //<Final> Instancia o botão para acessar a atividade GET ALL POSTS
+
+        //<Início> Instancia o botão para acessar a atividade GET ALL COMMENTS
+        Button getAllCommentsBtn = findViewById(R.id.getAllCommentsBtn);
+        getAllCommentsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AllComments.class);
+                startActivity(intent);
+            }
+        });
+        //<Final> Instancia o botão para acessar a atividade GET ALL COMMENTS
+
+        //<Início> Instancia o botão para acessar a atividade GET ALL TO-DO
+        Button getToDoListBtn = findViewById(R.id.getToDoListBtn);
+        getToDoListBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AllToDo.class);
+                startActivity(intent);
+            }
+        });
+        //<Final> Instancia o botão para acessar a atividade GET ALL TO-DO
     }
 }

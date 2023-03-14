@@ -20,6 +20,12 @@
             android:name=".AllUsers"
             android:exported="false" />
         <activity
+            android:name=".AllComments"
+            android:exported="false" />
+        <activity
+            android:name=".AllToDo"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
