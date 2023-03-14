@@ -4,7 +4,9 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface JSONPlaceholder {
+public interface JSONPlaceholderPosts {
     @GET("posts")
     Call<List<Post>> getPost();
 }
+
+

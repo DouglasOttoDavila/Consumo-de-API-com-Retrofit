@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewPosts"
         android:layout_width="407dp"
         android:layout_height="617dp"
         app:layout_constraintBottom_toTopOf="@+id/backToHomeBtn"
