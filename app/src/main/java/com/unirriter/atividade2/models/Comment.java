@@ -1,4 +1,4 @@
-package com.unirriter.atividade2;
+package com.unirriter.atividade2.models;
 
 public class Comment {
     private String postId, id, name, email, body;

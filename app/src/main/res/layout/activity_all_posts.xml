@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllPosts">
+    android:background="@drawable/bkg_main"
+    tools:context=".views.AllPosts">
 
     <Button
         android:id="@+id/listAllUsers"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="List All Posts"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,18 +18,17 @@
 
     <Button
         android:id="@+id/backToHomeBtn"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Back to Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPosts"
-        android:layout_width="407dp"
-        android:layout_height="617dp"
+        android:layout_width="405dp"
+        android:layout_height="487dp"
         app:layout_constraintBottom_toTopOf="@+id/backToHomeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

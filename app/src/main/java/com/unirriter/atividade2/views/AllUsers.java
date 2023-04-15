@@ -1,4 +1,4 @@
-package com.unirriter.atividade2;
+package com.unirriter.atividade2.views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +10,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.unirriter.atividade2.R;
 import com.unirriter.atividade2.adapters.UserAdapter;
 import com.unirriter.atividade2.models.User;
-import com.unirriter.atividade2.views.MainActivity;
+import com.unirriter.atividade2.presenters.JSONPlaceholderUsers;
 
 import java.util.List;
 

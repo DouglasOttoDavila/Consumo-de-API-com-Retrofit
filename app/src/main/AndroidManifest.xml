@@ -14,19 +14,19 @@
         android:theme="@style/Theme.Atividade2"
         tools:targetApi="31">
         <activity
-            android:name=".AllPosts"
+            android:name=".views.AllPosts"
             android:exported="false" />
         <activity
-            android:name=".AllUsers"
+            android:name=".views.AllUsers"
             android:exported="false" />
         <activity
-            android:name=".AllComments"
+            android:name=".views.AllComments"
             android:exported="false" />
         <activity
-            android:name=".AllToDo"
+            android:name=".views.AllToDo"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,45 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/bkg_main"
+    tools:context=".views.MainActivity">
 
     <Button
         android:id="@+id/getAllUsersBtn"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="50dp"
         android:text="All Users"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/getAllPostsBtn"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="All Posts"
-        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
-        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
-        app:layout_constraintTop_toBottomOf="@+id/getAllUsersBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/getAllCommentsBtn"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="All Comments"
-        app:layout_constraintEnd_toEndOf="@+id/getAllPostsBtn"
-        app:layout_constraintStart_toStartOf="@+id/getAllPostsBtn"
+        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
         app:layout_constraintTop_toBottomOf="@+id/getAllPostsBtn" />
+
+    <Button
+        android:id="@+id/getAllPostsBtn"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="All Posts"
+        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
+        app:layout_constraintTop_toBottomOf="@+id/getAllUsersBtn" />
 
     <Button
         android:id="@+id/getToDoListBtn"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="To-Do List"
-        app:layout_constraintEnd_toEndOf="@+id/getAllCommentsBtn"
-        app:layout_constraintStart_toStartOf="@+id/getAllCommentsBtn"
-        app:layout_constraintTop_toBottomOf="@+id/getAllCommentsBtn" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
+        app:layout_constraintTop_toBottomOf="@+id/getAllCommentsBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="181dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bug_life" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

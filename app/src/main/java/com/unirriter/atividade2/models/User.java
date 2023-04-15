@@ -1,4 +1,4 @@
-package com.unirriter.atividade2;
+package com.unirriter.atividade2.models;
 
 public class User {
     private String id, name, username, phone;

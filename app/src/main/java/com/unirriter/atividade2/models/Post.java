@@ -1,4 +1,4 @@
-package com.unirriter.atividade2;
+package com.unirriter.atividade2.models;
 
 public class Post {
     private String userId, id, title, body;

@@ -1,4 +1,4 @@
-package com.unirriter.atividade2;
+package com.unirriter.atividade2.presenters;
 
 import com.unirriter.atividade2.models.User;
 

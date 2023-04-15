@@ -1,4 +1,4 @@
-package com.unirriter.atividade2;
+package com.unirriter.atividade2.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.unirriter.atividade2.R;
 import com.unirriter.atividade2.adapters.CommentAdapter;
 import com.unirriter.atividade2.models.Comment;
-import com.unirriter.atividade2.views.MainActivity;
+import com.unirriter.atividade2.presenters.JSONPlaceholderComments;
 
 import java.util.List;
 
