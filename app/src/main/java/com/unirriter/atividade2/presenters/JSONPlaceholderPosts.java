@@ -1,5 +1,7 @@
 package com.unirriter.atividade2;
 
+import com.unirriter.atividade2.models.Post;
+
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;

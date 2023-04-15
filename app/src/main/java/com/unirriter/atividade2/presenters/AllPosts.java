@@ -10,6 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.unirriter.atividade2.adapters.PostAdapter;
+import com.unirriter.atividade2.models.Post;
+import com.unirriter.atividade2.views.MainActivity;
+
 import java.util.List;
 
 import retrofit2.Call;
