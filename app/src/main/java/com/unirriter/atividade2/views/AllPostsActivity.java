@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,19 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.unirriter.atividade2.R;
 import com.unirriter.atividade2.adapters.PostAdapter;
 import com.unirriter.atividade2.models.Post;
-import com.unirriter.atividade2.presenters.JSONPlaceholderPosts;
+import com.unirriter.atividade2.presenter.PostListContract;
+import com.unirriter.atividade2.presenter.PostListPresenter;
 
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
-public class AllPosts extends AppCompatActivity {
+public class AllPostsActivity extends AppCompatActivity implements PostListContract.View {
 
     private RecyclerView recyclerView;
+    private PostListContract.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +30,47 @@ public class AllPosts extends AppCompatActivity {
         //<Início> Instancia o botão para acessar a atividade MAIN
         Button backToHomeBtn = findViewById(R.id.backToHomeBtn);
         backToHomeBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(AllPosts.this, MainActivity.class);
+            Intent intent = new Intent(AllPostsActivity.this, MainActivity.class);
             startActivity(intent);
         });
         //<Final> Instancia o botão para acessar a atividade MAIN
 
-        Button listAllUsers = findViewById(R.id.listAllUsers);
+        recyclerView = findViewById(R.id.recyclerViewPosts);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        presenter = new PostListPresenter(this);
+        presenter.getPosts();
+    }
+
+    @Override
+    public void showLoading() {
+        // show loading progress
+    }
+
+    @Override
+    public void hideLoading() {
+        // hide loading progress
+    }
+
+    @Override
+    public void showPosts(List<Post> postList) {
+        PostAdapter postAdapter = new PostAdapter(this, postList);
+        recyclerView.setAdapter(postAdapter);
+    }
+
+    @Override
+    public void showError(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        presenter.detachView();
+    }
+
+        /*Button listAllUsers = findViewById(R.id.listAllUsers);
         listAllUsers.setOnClickListener(v -> {
 
             recyclerView = findViewById(R.id.recyclerViewPosts);
@@ -58,19 +88,18 @@ public class AllPosts extends AppCompatActivity {
                 @Override
                 public void onResponse(@NonNull Call<List<Post>> call, @NonNull Response<List<Post>> response) {
                     if (!response.isSuccessful()) {
-                        Toast.makeText(AllPosts.this, response.code(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AllPostsActivity.this, response.code(), Toast.LENGTH_SHORT).show();
                         return;
                     }
                     List<Post> postList = response.body();
-                    PostAdapter postAdapter = new PostAdapter(AllPosts.this, postList);
+                    PostAdapter postAdapter = new PostAdapter(AllPostsActivity.this, postList);
                     recyclerView.setAdapter(postAdapter);
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<List<Post>> call, @NonNull Throwable t) {
-                    Toast.makeText(AllPosts.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AllPostsActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
-        });
-    }
+        });*/
 }

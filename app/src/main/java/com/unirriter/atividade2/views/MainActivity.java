@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         getAllUsersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AllUsers.class);
+                Intent intent = new Intent(MainActivity.this, AllUsersActivity.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         getAllPostsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AllPosts.class);
+                Intent intent = new Intent(MainActivity.this, AllPostsActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         getAllCommentsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AllComments.class);
+                Intent intent = new Intent(MainActivity.this, AllCommentsActivity.class);
                 startActivity(intent);
             }
         });
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         getToDoListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AllToDo.class);
+                Intent intent = new Intent(MainActivity.this, AllToDoActivity.class);
                 startActivity(intent);
             }
         });

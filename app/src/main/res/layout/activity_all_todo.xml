@@ -6,16 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bkg_main"
-    tools:context=".views.AllUsers">
-
-    <Button
-        android:id="@+id/listAllToDo"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="List All To-Do Tasks"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".views.AllUsersActivity">
 
     <Button
         android:id="@+id/backToHomeBtn"
@@ -29,10 +20,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewToDo"
         android:layout_width="405dp"
-        android:layout_height="487dp"
+        android:layout_height="650dp"
         app:layout_constraintBottom_toTopOf="@+id/backToHomeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listAllToDo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
