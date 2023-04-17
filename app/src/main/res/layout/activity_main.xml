@@ -9,6 +9,7 @@
 
     <Button
         android:id="@+id/getAllUsersBtn"
+        android:elevation="15dp"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -19,17 +20,8 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/getAllCommentsBtn"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:text="All Comments"
-        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
-        app:layout_constraintTop_toBottomOf="@+id/getAllPostsBtn" />
-
-    <Button
         android:id="@+id/getAllPostsBtn"
+        android:elevation="15dp"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="All Posts"
@@ -37,6 +29,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
         app:layout_constraintTop_toBottomOf="@+id/getAllUsersBtn" />
+
+    <Button
+        android:id="@+id/getAllCommentsBtn"
+        android:elevation="15dp"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="All Comments"
+        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
+        app:layout_constraintTop_toBottomOf="@+id/getAllPostsBtn" />
 
     <Button
         android:id="@+id/getToDoListBtn"
@@ -48,6 +51,32 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
         app:layout_constraintTop_toBottomOf="@+id/getAllCommentsBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/getAlbumsBtn"
+        android:elevation="15dp"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Albums List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
+        app:layout_constraintTop_toBottomOf="@+id/getToDoListBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/getPhotosBtn"
+        android:elevation="15dp"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Photos List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/getAllUsersBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/getAllUsersBtn"
+        app:layout_constraintTop_toBottomOf="@+id/getAlbumsBtn"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView

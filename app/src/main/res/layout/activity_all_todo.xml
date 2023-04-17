@@ -8,6 +8,29 @@
     android:background="@drawable/bkg_main"
     tools:context=".views.AllUsersActivity">
 
+    <ImageView
+        android:id="@+id/tletter"
+        android:layout_width="61dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/t_letter" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="o-Do"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tletter"
+        app:layout_constraintStart_toEndOf="@+id/tletter"
+        app:layout_constraintTop_toTopOf="@+id/tletter" />
+
     <Button
         android:id="@+id/backToHomeBtn"
         android:layout_width="300dp"
@@ -19,11 +42,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewToDo"
-        android:layout_width="405dp"
+        android:layout_width="match_parent"
         android:layout_height="650dp"
+        android:background="#57FFFFFF"
+        android:radius="5dp"
         app:layout_constraintBottom_toTopOf="@+id/backToHomeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tletter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

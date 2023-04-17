@@ -1,5 +1,6 @@
 package com.unirriter.atividade2.data;
 
+import com.unirriter.atividade2.models.Album;
 import com.unirriter.atividade2.models.Comment;
 import com.unirriter.atividade2.models.Post;
 import com.unirriter.atividade2.models.ToDo;
@@ -22,4 +23,7 @@ public interface ApiService {
 
     @GET("todos")
     Call<List<ToDo>> getTodos();
+
+    @GET("albums")
+    Call<List<Album>> getAlbums();
 }

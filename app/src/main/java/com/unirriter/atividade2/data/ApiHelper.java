@@ -1,5 +1,6 @@
 package com.unirriter.atividade2.data;
 
+import com.unirriter.atividade2.models.Album;
 import com.unirriter.atividade2.models.Comment;
 import com.unirriter.atividade2.models.Post;
 import com.unirriter.atividade2.models.ToDo;
@@ -50,6 +51,11 @@ public class ApiHelper {
 
     public void getToDos(Callback<List<ToDo>> callback) {
         Call<List<ToDo>> call = apiService.getTodos();
+        call.enqueue(callback);
+    }
+
+    public void getAlbums(Callback<List<Album>> callback) {
+        Call<List<Album>> call = apiService.getAlbums();
         call.enqueue(callback);
     }
 }

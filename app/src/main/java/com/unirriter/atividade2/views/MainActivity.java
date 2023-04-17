@@ -59,5 +59,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //<Final> Instancia o botão para acessar a atividade GET ALL TO-DO
+
+        //<Início> Instancia o botão para acessar a atividade GET ALL ALBUMS
+        Button getAlbumListBtn = findViewById(R.id.getAlbumsBtn);
+        getAlbumListBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AllAlbumsActivity.class);
+                startActivity(intent);
+            }
+        });
+        //<Final> Instancia o botão para acessar a atividade GET ALL ALBUMS
     }
 }

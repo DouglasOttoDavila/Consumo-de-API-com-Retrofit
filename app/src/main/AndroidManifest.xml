@@ -26,6 +26,9 @@
             android:name=".views.AllToDoActivity"
             android:exported="false" />
         <activity
+            android:name=".views.AllAlbumsActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
